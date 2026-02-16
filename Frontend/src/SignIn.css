@@ -1,0 +1,316 @@
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  margin: 0;
+  font-family: 'Garamond', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #f0f4ff, #e0f2ff);
+  min-height: 100vh;
+  animation: fadeIn 1s ease-in;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bcb2ea, #ffd7d7);
+}
+
+header {
+  display: flex;
+  justify-content: space-between; /* Changed to space-between for left alignment */
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-header {
+  margin: 0; /* Remove default margin */
+  font-size: 1.5rem; /* Adjust font size if needed */
+}
+
+.header-buttons {
+  display: flex;
+  gap: 1rem; /* Space between buttons */
+}
+
+
+header button {
+  padding: 0.5rem 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+header button:hover {
+  background-color: #e0f2ff;
+  transform: translateY(-2px);
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Styling for the circle container */
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.logo-circle {
+  width: 220px; /* Adjust size as needed */
+  height: 220px; /* Same as width for a perfect circle */
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Ensures the image stays within the circle */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo-image {
+  width: 105%; /* Adjust for padding inside the circle */
+  height: auto;
+  object-fit: contain; /* Ensures the image scales without distortion */
+}
+
+.logo-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.subtitle {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+.sign-in-form {
+  background-color: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(197, 132, 132, 0.1);
+  width: 100%;
+  max-width: 400px;
+  transition: all 0.3s ease;
+  align-items: center;
+}
+
+.sign-in-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+.sign-in-form h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+  border-color: #4a90e2;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.input-group button {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.input-group button:hover {
+  color: #4a90e2;
+}
+
+.sign-in-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.sign-in-button:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/* Social Sign-In Section */
+.social-sign-in {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.social-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Google button styles */
+.social-button.google {
+  color: #db4437;
+  border-color: #db4437;
+}
+
+.social-button.google:hover {
+  background-color: rgba(219, 68, 55, 0.1);
+}
+
+/* Microsoft button styles */
+.social-button.microsoft {
+  color: #00a4ef;
+  border-color: #00a4ef;
+}
+
+.social-button.microsoft:hover {
+  background-color: rgba(0, 164, 239, 0.1);
+}
+
+/* Styling the icons and text inside the buttons */
+.social-button .icon {
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+}
+
+.social-buttons button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #4a90e2;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #3a7bc8;
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1.5rem;
+  background-color: rgba(255, 255, 255, 0.8); /* Made translucent */
+  color: #555;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease-in;
+}
+
+.modal-content {
+  background-color: rgb(197, 154, 227);
+  padding: 2rem;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.modal-header button {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.modal-header button:hover {
+  color: #4a90e2;
+  transform: rotate(90deg);
+}
+
+.modal-body {
+  height: 500px;
+  overflow-y: auto;
+}
+
+.forgot-password {
+  margin-top: 1rem; /* Add space above the button */
+  background: none; /* Remove default button background */
+  border: none; /* Remove default border */
+  color: #008080; /* Change text color */
+  cursor: pointer; /* Change cursor to pointer */
+  text-decoration: underline; /* Underline the text for emphasis */
+  font-size: 0.9rem; /* Font size for the button */
+}
