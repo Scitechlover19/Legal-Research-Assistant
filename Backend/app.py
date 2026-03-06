@@ -121,7 +121,7 @@ from langchain.chains import ConversationalRetrievalChain
 import streamlit as st
 import time
 
-TOGETHER_AI_API_KEY = '679426cfb4eaee7a7981a165e1dd796f344aa1d8feb374fbb7157ad1d09ea6be'  # Replace with your Together API key
+TOGETHER_AI_API_KEY = ''  # Replace with your Together API key
 os.environ['TOGETHER_AI'] = TOGETHER_AI_API_KEY
 
 st.set_page_config(page_title="LRA")
